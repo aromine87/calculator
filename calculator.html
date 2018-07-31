@@ -1,0 +1,141 @@
+<html>
+<head>
+    <title>dopecalculator</title>
+    <style>
+        button {
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #display {
+            border: 1px solid grey;
+            font-family: "Courier New", Courier, monospace;
+            text-align: right;
+        }
+    </style>
+    <script>
+
+
+        //todo operator
+        //todo second number press
+        function apendigit(digit)
+        {
+            var inputdisplay = document.getElementById("display");
+            if (inputdisplay.innerText.length < 10)
+            {
+                if (inputdisplay.innerText == "0")
+                {
+                    inputdisplay.innerText = digit;
+                }
+                else
+                {
+                    inputdisplay.innerText = inputdisplay.innerText + digit;
+                }
+            }
+        }
+
+        function decimal()
+        {
+            var inputdisplay = document.getElementById("display");
+            if(!inputdisplay.innerText.includes(".")){
+                inputdisplay.innerText = inputdisplay.innerText + ".";
+            }
+
+
+        }
+
+        function erase()
+        {
+
+            document.getElementById("display").innerText = "0";
+        }
+    </script>
+
+
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4">
+            <div id="display">0</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="apendigit(7)">7</button>
+        </td>
+        <td>
+            <button onclick="apendigit(8)">8</button>
+        </td>
+        <td>
+            <button onclick="apendigit(9)">9</button>
+        </td>
+        <td>
+            <button>÷</button>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <button onclick="apendigit(4)">4</button>
+        </td>
+        <td>
+            <button onclick="apendigit(5)">5</button>
+        </td>
+
+        <td>
+            <button onclick="apendigit(6)">6</button>
+        </td>
+
+        <td>
+            <button>×</button>
+        </td>
+
+
+    </tr>
+    <tr>
+        <td>
+            <button onclick="apendigit(1)">1</button>
+        </td>
+        <td>
+            <button onclick="apendigit(2)">2</button>
+        </td>
+        <td>
+            <button onclick="apendigit(3)">3</button>
+        </td>
+        <td>
+            <button>−</button>
+        </td>
+
+    </tr>
+    <tr>
+
+        <td>
+            <button>±</button>
+        </td>
+        <td>
+            <button onclick="apendigit(0)">0</button>
+        </td>
+        <td>
+            <button onclick="decimal()">.</button>
+        </td>
+        <td>
+            <button>+</button>
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button onclick="erase()">C</button>
+        </td>
+        <td colspan="2">
+            <button>=</button>
+        </td>
+
+
+    </tr>
+
+</table>
+</body>
+</html>
