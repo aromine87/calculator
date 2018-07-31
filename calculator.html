@@ -37,16 +37,14 @@
         function decimal()
         {
             var inputdisplay = document.getElementById("display");
-            if(!inputdisplay.innerText.includes(".")){
+            if (!inputdisplay.innerText.includes("."))
+            {
                 inputdisplay.innerText = inputdisplay.innerText + ".";
             }
-
-
         }
 
         function erase()
         {
-
             document.getElementById("display").innerText = "0";
         }
     </script>
@@ -71,7 +69,7 @@
             <button onclick="apendigit(9)">9</button>
         </td>
         <td>
-            <button>÷</button>
+            <button>&divide;</button>
         </td>
 
     </tr>
@@ -89,7 +87,7 @@
         </td>
 
         <td>
-            <button>×</button>
+            <button>&times;</button>
         </td>
 
 
@@ -105,14 +103,14 @@
             <button onclick="apendigit(3)">3</button>
         </td>
         <td>
-            <button>−</button>
+            <button>&ndash;</button>
         </td>
 
     </tr>
     <tr>
 
         <td>
-            <button>±</button>
+            <button>&plusmn;</button>
         </td>
         <td>
             <button onclick="apendigit(0)">0</button>
